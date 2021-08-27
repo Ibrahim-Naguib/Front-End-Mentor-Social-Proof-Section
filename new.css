@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 375px;
+    background-image: url(./images/bg-pattern-top-mobile.svg) ,url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left , right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Spartan', sans-serif;
+}
+@media (min-width: 376px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(./images/bg-pattern-top-desktop.svg) ,url(./images/bg-pattern-bottom-desktop.svg);
+    }
+}
+.boxes {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 376px) {
+    .boxes {
+        width: 1150px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+.boxes .text {
+    width: 325px;
+    margin-top: 80px;
+}
+@media (min-width: 376px) {
+    .boxes .text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin-top: 0;
+        width: auto;
+    }
+}
+.boxes .text h1 {
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+}
+@media (min-width: 376px) {
+    .boxes .text h1 {
+        font-size: 45px;
+        padding-right: 100px;
+        text-align: left;
+    }
+}
+.boxes .text p {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(303, 10%, 53%);
+}
+@media (min-width: 376px) {
+    .boxes .text p {
+        font-size: 15px;
+        margin-top: 10px;
+        padding-right: 80px;
+        text-align: left;
+    }
+}
+.boxes .rate {
+    margin-top: 50px;
+}
+@media (min-width: 376px) {
+    .boxes .rate {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+.boxes .rate > div {
+    background-color: hsl(300, 24%, 96%);
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    padding: 15px;
+    width: 325px;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+@media (min-width: 376px) {
+    .boxes .rate > div {
+        width: 450px;
+        padding: 15px;
+        margin: 0 0 15px 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+    .boxes .rate > div:first-of-type {
+        margin-right: 100px;
+    }
+    .boxes .rate > div:nth-child(2) {
+        margin-right: 50px;
+    }
+}
+.boxes .rate .stars {
+    padding: 5px 0 10px 0;
+}
+@media (min-width: 376px) {
+    .boxes .rate .stars {
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+}
+.boxes .rate .stars i {
+    padding: 0 3px;
+    color: #f59f46;
+}
+.boxes .comments {
+    margin-top: 50px;
+}
+@media (min-width: 376px) {
+    .boxes .comments {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+}
+.boxes .comments > div {
+    margin: 0 auto 30px;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 8px;
+    padding: 30px 29px 30px 25px;
+    width: 325px;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (min-width: 376px) {
+    .boxes .comments > div {
+        width: 365px;
+        height: 250px;
+        padding: 35px 30px 30px 40px;
+        margin: 0;
+    }
+    .boxes .comments > div:nth-child(2) {
+        margin-top: 15px;
+    }
+    .boxes .comments > div:last-of-type {
+        margin-top: 30px;
+    }
+}
+.boxes .comments > div img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.boxes .comments > div h5 {
+    align-self: center;
+    line-height: 1.6;
+    padding-left: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+@media (min-width: 376px) {
+    .boxes .comments > div h5 {
+        align-self: flex-start;
+    }
+}
+.boxes .comments > div h5 span {
+    color: hsl(333deg 80% 67% / 50%);
+}
+.boxes .comments > div p {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #ffffffc2;
+    font-weight: 500;
+    line-height: 1.7;
+}
